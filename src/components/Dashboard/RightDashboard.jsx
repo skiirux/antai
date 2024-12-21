@@ -106,10 +106,12 @@ const RightDashboard = () => {
         </div>
       </div>
       <div>
+      <div className="text-center md:text-left"> 
         <span>
           By signing up you agree to the{" "}
           <b className="hover:text-gray-500 cursor-pointer">Privacy Policy.</b>
         </span>
+        </div>
       </div>
     </div>
   );
