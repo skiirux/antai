@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/codeant-ai.git
+   git clone https://github.com/skiirux/ant.git
 2. Navigate to the project directory:
     ```bash
     cd antai-master
@@ -56,7 +56,7 @@ To run this project locally, follow these steps:
 
 ## Folder Structure
 
-📦 codeant-ai
+📦 antai
     
     ┣ 📂 public                  # Static files
     ┃  ┣ 📂 assets              # Images and icons
