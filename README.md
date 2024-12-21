@@ -29,8 +29,7 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/skiirux/ant.git
 2. Navigate to the project directory:
-    ```bash
-    cd antai-master
+    
 3. Install the dependencies:
     ```bash
     npm install
