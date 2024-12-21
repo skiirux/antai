@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router";
 import {
   ArrowRightOnRectangleIcon as LogoutIcon,
   Bars3Icon as MenuIcon,
@@ -17,6 +18,12 @@ const HomeSideBar = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [mobileView, setMobileView] = useState(false);
   const mobileViewRef = useRef(false);
+
+  const navigate = useNavigate();
+  // Add handleLogout function
+  const handleLogout = () => {
+    navigate("/"); // Navigate to Dashboard page
+  };
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -132,15 +139,16 @@ const HomeSideBar = () => {
             {/* Support and Logout for mobile view */}
             {mobileView && sidebarVisible && (
               <>
-                <a
-                  href="#"
-                  className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-100"
-                >
+                <a className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-100">
                   <SupportIcon className="w-5" />
                   <span className="ml-3">Support</span>
                 </a>
                 <a
                   href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLogout();
+                  }}
                   className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-100"
                 >
                   <LogoutIcon className="w-5" />
@@ -168,6 +176,10 @@ const HomeSideBar = () => {
             </a>
             <a
               href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLogout();
+              }}
               className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-100"
             >
               <LogoutIcon className="w-5" />
